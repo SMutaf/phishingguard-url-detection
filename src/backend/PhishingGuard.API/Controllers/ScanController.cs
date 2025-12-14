@@ -16,7 +16,6 @@ namespace PhishingGuard.API.Controllers
             _scanService = scanService;
         }
 
-        // POST api/scan
         [HttpPost]
         public async Task<IActionResult> Scan([FromBody] ScanRequest request)
         {
