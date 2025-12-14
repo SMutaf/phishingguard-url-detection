@@ -28,7 +28,7 @@ namespace PhishingGuard.Service.Services
                 DetectionDetails = new List<string>()
             };
 
-            var ruleResult = _ruleEngine.Analyze(request.Url);
+            var ruleResult = _ruleEngine.Analyze(request.Url);  
 
             if (ruleResult.RiskLevel == RiskLevel.Malicious)
             {

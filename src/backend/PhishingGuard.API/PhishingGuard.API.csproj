@@ -15,4 +15,10 @@
     <ProjectReference Include="..\PhishingGuard.Service\PhishingGuard.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="MLModel.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
