@@ -399,3 +399,28 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# =========================
+# PhishingGuard - Project Specific
+# =========================
+
+# Trained ML models (large & frequently changing)
+ml-models/
+trained-models/
+models/*.zip
+models/*.onnx
+models/*.model
+
+# Chrome Extension build / package outputs
+dist/
+build/
+release/
+*.crx
+
+# Environment & secrets
+.env
+appsettings.Local.json
+appsettings.Development.json
+
+# Runtime logs
+logs/

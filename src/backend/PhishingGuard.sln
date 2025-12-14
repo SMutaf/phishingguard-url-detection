@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhishingGuard.Core", "PhishingGuard.Core\PhishingGuard.Core.csproj", "{5F445DE3-5FDB-4431-B0CC-D58D2FCA8CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhishingGuard.Engine", "PhishingGuard.Engine\PhishingGuard.Engine.csproj", "{631CD5F8-B825-40CF-92D4-56FC2B62A370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhishingGuard.Service", "PhishingGuard.Service\PhishingGuard.Service.csproj", "{F011BB59-5F1B-449D-9C96-61BA78C296FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhishingGuard.API", "PhishingGuard.API\PhishingGuard.API.csproj", "{CDB6405E-D472-421C-88F2-C5FF384362C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F445DE3-5FDB-4431-B0CC-D58D2FCA8CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F445DE3-5FDB-4431-B0CC-D58D2FCA8CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F445DE3-5FDB-4431-B0CC-D58D2FCA8CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F445DE3-5FDB-4431-B0CC-D58D2FCA8CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{631CD5F8-B825-40CF-92D4-56FC2B62A370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{631CD5F8-B825-40CF-92D4-56FC2B62A370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{631CD5F8-B825-40CF-92D4-56FC2B62A370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{631CD5F8-B825-40CF-92D4-56FC2B62A370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F011BB59-5F1B-449D-9C96-61BA78C296FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F011BB59-5F1B-449D-9C96-61BA78C296FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F011BB59-5F1B-449D-9C96-61BA78C296FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F011BB59-5F1B-449D-9C96-61BA78C296FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB6405E-D472-421C-88F2-C5FF384362C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB6405E-D472-421C-88F2-C5FF384362C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB6405E-D472-421C-88F2-C5FF384362C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB6405E-D472-421C-88F2-C5FF384362C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D633E06-9B4A-44F1-8CB4-7009139B778C}
+	EndGlobalSection
+EndGlobal

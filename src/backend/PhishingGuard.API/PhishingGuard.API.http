@@ -1,0 +1,6 @@
+@PhishingGuard.API_HostAddress = http://localhost:5113
+
+GET {{PhishingGuard.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
