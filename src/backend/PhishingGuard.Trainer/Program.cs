@@ -36,7 +36,7 @@ namespace PhishingGuard.Trainer
                 trimWhitespace: true,
                 allowSparse: true);
 
-            Console.WriteLine("Veriler karıştırılıyor (Shuffle)...");
+            Console.WriteLine("Veriler karıştırılıyor");
             var shuffledData = mlContext.Data.ShuffleRows(dataView);
 
             var pipeline = mlContext.Transforms.Text.FeaturizeText("Features", nameof(UrlDataInput.UrlText))
@@ -60,7 +60,7 @@ namespace PhishingGuard.Trainer
 
             var trainingPipeline = pipeline.Append(trainer);
 
-            Console.WriteLine("Model eğitiliyor (FastTree)... Bu işlem işlemci gücüne göre 1-3 dakika sürebilir.");
+            Console.WriteLine("Model eğitiliyor (FastTree).");
 
             var splitData = mlContext.Data.TrainTestSplit(shuffledData, testFraction: 0.2);
             var model = trainingPipeline.Fit(splitData.TrainSet);
