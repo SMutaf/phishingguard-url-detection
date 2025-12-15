@@ -9,12 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="dataset.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <PackageReference Include="Microsoft.ML.FastTree" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
