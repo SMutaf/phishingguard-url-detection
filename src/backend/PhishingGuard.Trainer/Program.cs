@@ -17,7 +17,7 @@ namespace PhishingGuard.Trainer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== PhishingGuard PRO - İyileştirilmiş Eğitim Modu ===");
+            Console.WriteLine("İyileştirilmiş Eğitim Modu");
 
             var mlContext = new MLContext(seed: 1);
 

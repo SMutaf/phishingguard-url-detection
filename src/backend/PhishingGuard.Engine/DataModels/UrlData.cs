@@ -13,6 +13,6 @@ namespace PhishingGuard.Engine.DataModels
         public string UrlText { get; set; }
 
         [LoadColumn(1)]
-        public bool Label { get; set; }
+        public string Label { get; set; }
     }
 }
