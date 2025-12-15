@@ -17,8 +17,6 @@ namespace PhishingGuard.Trainer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("İyileştirilmiş Eğitim Modu");
-
             var mlContext = new MLContext(seed: 1);
 
             string dataPath = Path.Combine(Environment.CurrentDirectory, "dataset_clean.csv");
