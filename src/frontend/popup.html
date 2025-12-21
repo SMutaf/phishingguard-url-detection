@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>PhishingGuard</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>PhishingGuard</h2>
+            <span class="version">v1.0 AI</span>
+        </div>
+
+        <div class="content">
+            <p id="currentUrl" class="url-text">URL Bekleniyor...</p>
+            
+            <button id="scanBtn" class="scan-btn">
+                Taramayı Başlat
+            </button>
+
+            <div id="loader" class="loader hidden"></div>
+
+            <div id="resultArea" class="result-box hidden">
+                <div id="statusIcon" class="status-icon">✅</div>
+                <h3 id="statusTitle">Güvenli</h3>
+                <div class="score-bar">
+                    <div id="scoreFill" class="score-fill" style="width: 0%"></div>
+                </div>
+                <p id="scoreText">Risk Skoru: %0</p>
+                <hr>
+                <ul id="detailsList" class="details-list"></ul>
+                <small id="sourceText" class="source-badge">Kaynak: AI</small>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span id="apiStatus" class="api-status">API Bağlantısı Kontrol Ediliyor...</span>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
