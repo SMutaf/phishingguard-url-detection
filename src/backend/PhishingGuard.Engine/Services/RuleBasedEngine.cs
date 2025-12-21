@@ -27,6 +27,18 @@ namespace PhishingGuard.Engine.Services
         {
             var result = new ScanResult { Url = url, DetectionSource = "RuleEngine" };
             string lowerUrl = url.ToLower();
+            string domain = GetDomainFromUrl(url);
+
+            // güvenilir site uzantılıra ai gönderip yanlış alarm almayı engelleriz
+            if (domain.EndsWith(".edu.tr") || domain.EndsWith(".gov.tr") || domain.EndsWith(".k12.tr") || domain.EndsWith("beun.edu.tr"))
+            {
+                result.IsPhishing = false;
+                result.RiskLevel = RiskLevel.Safe;
+                result.RiskScore = 0;
+                result.DetectionDetails.Add("Alan adı güvenilir kurum uzantısı (.edu.tr / .gov.tr) taşıyor.");
+                result.DetectionSource = "Beyaz Liste (Whitelist)";
+                return result; // Direkt dön, AI'a gitmeye gerek yok!
+            }
 
             // ip adersi kontolü
             if (System.Text.RegularExpressions.Regex.IsMatch(url, @"http(s)?://\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"))
@@ -39,7 +51,6 @@ namespace PhishingGuard.Engine.Services
             }
 
             // marka taklidi
-            string domain = GetDomainFromUrl(url); 
 
             foreach (var brand in _targetBrands)
             {

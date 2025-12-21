@@ -28,19 +28,29 @@ namespace PhishingGuard.Service.Services
                 DetectionDetails = new List<string>()
             };
 
-            var ruleResult = _ruleEngine.Analyze(request.Url);  
+            // 1. Kural Motoru Analizi
+            var ruleResult = _ruleEngine.Analyze(request.Url);
 
+
+            // Eğer Kural Motoru "Kesin Zararlı" dediyse dön
             if (ruleResult.RiskLevel == RiskLevel.Malicious)
             {
                 return ruleResult;
             }
 
+            // YENİ KURAL: Eğer Kural Motoru "Beyaz Liste" dediyse DÖN! (AI'ı çalıştırma)
+            if (ruleResult.DetectionSource == "Beyaz Liste (Whitelist)")
+            {
+                return ruleResult;
+            }
+
+            // 2. AI Analizi 
             var aiResult = await Task.Run(() => _aiEngine.Analyze(request.Url));
 
             double finalScore = Math.Max(ruleResult.RiskScore, aiResult.RiskScore);
 
             finalResult.RiskScore = finalScore;
-            finalResult.IsPhishing = finalScore >= 50; 
+            finalResult.IsPhishing = finalScore >= 50;
 
             if (finalScore >= 90) finalResult.RiskLevel = RiskLevel.Malicious;
             else if (finalScore >= 70) finalResult.RiskLevel = RiskLevel.HighRisk;
