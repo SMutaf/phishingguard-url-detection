@@ -5,10 +5,12 @@
   "description": "Yapay zeka ve hibrit motor ile anlık URL taraması yapar.",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage" 
   ],
   "host_permissions": [
-    "https://localhost:7139/*" 
+    "https://localhost:7139/*",
+    "<all_urls>"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -22,5 +24,13 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ]
 }

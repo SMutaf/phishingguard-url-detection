@@ -1,0 +1,47 @@
+/* PhishingGuard Tooltip & Button Stili */
+#pg-tooltip {
+    position: absolute;
+    z-index: 999999;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    display: none;
+    cursor: default; 
+    max-width: 300px;
+    transition: opacity 0.2s;
+}
+
+/* Analiz Et Butonu Modu */
+.pg-button-mode {
+    background-color: #3498db !important; 
+    color: white !important;
+    font-weight: bold;
+    cursor: pointer !important; 
+    border: none !important;
+}
+
+.pg-button-mode:hover {
+    background-color: #2980b9 !important; 
+    transform: scale(1.05); 
+}
+
+/* Sonuç Modları */
+.pg-safe {
+    border-left: 5px solid #2ecc71 !important;
+    background: #f0fdf4 !important;
+}
+
+.pg-danger {
+    border-left: 5px solid #e74c3c !important;
+    background: #fef2f2 !important;
+}
+
+.pg-header {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+}

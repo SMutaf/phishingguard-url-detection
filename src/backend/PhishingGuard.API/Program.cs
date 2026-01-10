@@ -9,9 +9,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAll",
         builder =>
         {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
+            builder
+            .AllowAnyOrigin()  
+            .AllowAnyMethod()  
+            .AllowAnyHeader(); 
         });
 });
 
@@ -20,9 +21,7 @@ builder.Services.AddTransient<RuleBasedEngine>();
 builder.Services.AddTransient<AiEngine>();
 builder.Services.AddScoped<IPhishingScanService, PhishingScanService>();
 
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -35,7 +34,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//  HTTPS Yönlendirmesi 
 app.UseHttpsRedirection();
+
+//  önce routing
+app.UseRouting();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
