@@ -49,7 +49,7 @@ namespace PhishingGuard.Engine.Services
 
             if (result.IsPhishing)
             {
-                result.DetectionDetails.Add($"AI Modeli: URL yapısı zararlı paternlerle eşleşiyor (Güven Oranı: %{result.RiskScore}).");
+                result.DetectionDetails.Add($"AI Modeli: URL yapısı zararlı paternlerle eşleşiyor (Risk Oranı: %{result.RiskScore}).");
             }
             else
             {
